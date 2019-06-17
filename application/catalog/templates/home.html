@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block content %}
+<div class="categories">
+  <h1>Categories</h1>
+  <hr>
+  {% if g.user %}
+    <a href="{{ url_for('category.new') }}"><h4 style="font-size: 18px; margin-bottom: 10px;">Add Category</h4></a>
+  {% endif %}
+  <ul>
+    {% for category in categories %}
+      <a href="/category/{{ category['name'] }}"><li>{{ category['name'] }}</li></a>
+    {% endfor %}
+  </ul>
+</div>
+<div class="contents">
+  <h1>Latest Item</h1>
+  {% if g.user %}
+    <a href="{{ url_for('item.new') }}"><h4 style="font-size: 18px; margin-bottom: 10px;">Add New Item</h4></a>
+  {% endif %}
+  <ul>
+    {% for item in items %}
+      <a href="/item/details/{{ item[0]['id'] }}"><li>{{ item[0]['title'] }}({{ item[1]['name'] }})</li></a>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

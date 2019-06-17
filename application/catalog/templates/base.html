@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block title %}{% endblock %} - Catalog App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <div class="left">
+        <a href="{{ url_for('index') }}"><h1 class="brand">Catalog App</h1></a>
+      </div>
+      <div class="right">
+        {% if g.user %}
+          <a href="{{ url_for('auth.logout') }}"><button class="btn">Logout</button></a>
+        {% else %}
+          <a href="{{ url_for('auth.login') }}"><button class="btn">Login</button></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

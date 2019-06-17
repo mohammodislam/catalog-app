@@ -1,0 +1,54 @@
+body{
+  background-color: lightgray;
+}
+.container{
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.content{
+  background-color: white;
+  width: 100%;
+  padding: 40px 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #333333;
+}
+h1{
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+label{
+  font-size: 24px;
+}
+input{
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 30px;
+  width: 100%;
+}
+input[type=submit]{
+  background-color: white;
+  width: 100%;
+}
+.center{
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.flash{
+  width: 350px;
+  background-color: orange;
+  color: black;
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid #333333;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-center{
+  text-align: center;
+}

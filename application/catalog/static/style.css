@@ -1,0 +1,117 @@
+body{
+  background-color: lightgray;
+}
+.header{
+  padding: 10px;
+
+  height: 40px;
+  width: 100%;
+
+  background-color: #1C262F;
+}
+.container{
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.brand{
+  font-size: 32px;
+  color: white;
+}
+.btn{
+  border: none;
+  padding: 10px;
+  border-radius: 2px;
+  margin: 0 20px;
+}
+.main{
+  width: 900px;
+  height: 400px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+.categories{
+  width: 25%;
+  height: 100%;
+  padding: 20px;
+  border-right: 1px solid lightgray;
+  float: left;
+}
+.categories h1{
+  font-size: 24px;
+}
+.contents{
+  width: 60%;
+  height: 100%;
+  padding: 20px;
+  float: left;
+}
+.contents h1{
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+a{
+  text-decoration: none !important;
+  color: #DC5A56;
+  font-weight: bold;
+}
+ul li{
+  list-style-type: none;
+  margin-bottom: 3px;
+  font-size: 18px;
+}
+#category input{
+  border: 1px solid lightgray; 
+  border-radius: 3px;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 2px;
+}
+#category input[type=submit]{
+  width: 100px;
+}
+#add_item{
+  padding: 20px;
+}
+#add_item h1{
+  font-size: 40px;
+}
+#add_item input, select{
+  margin-bottom: 20px;
+}
+#add_item input[type=submit]{
+  margin: 10px 0;
+  border: 1px solid gray;
+  background-color: white;
+}
+#edit_item{
+  padding: 20px;
+}
+#edit_item h1{
+  font-size: 40px;
+}
+#edit_item input, select{
+  margin-bottom: 20px;
+}
+#edit_item input[type=submit]{
+  margin: 10px 0;
+  border: 1px solid gray;
+  background-color: white;
+}
+#item_details{
+  padding: 20px;
+}
+#item_details h1{
+  font-size: 32px;
+}
+#item_details p{
+  padding: 10px 0;
+}

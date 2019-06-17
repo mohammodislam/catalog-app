@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Add New Category
+{% endblock %}
+
+{% block content %}
+<div id="category">
+    <div class="categories">
+      <h1>Add Category</h1>
+      <hr>
+      <form action="/category/save" method="POST">
+        <input placeholder="Enter new category name" name="category" type="text">
+        <input type="submit" value="Save">
+      </form>
+    </div>
+    <div class="contents">
+      <ul>
+        {% for category in categories %}
+        <li>{{ category['name'] }} - <a href="/category/delete/{{ category['id'] }}">delete</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+</div>
+{% endblock %}

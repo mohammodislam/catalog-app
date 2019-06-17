@@ -1,0 +1,27 @@
+{% extends 'auth_base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Register{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <div class="center">
+    <h1>Register</h1>
+  </div>
+  <form action="/auth/register" method="post">
+    <div class="center">
+      <label for="username">Username</label>
+      <input name="username" id="username" required>
+    </div>
+    <div class="center">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required>
+    </div>
+    <div class="center">
+      <input type="submit" value="Register">
+    </div>
+  </form>
+  <div class="text-center">
+    <p>Old User? <a href="{{ url_for('auth.login') }}">Login</a> | Go back <a href="{{ url_for('index') }}">Home</a></p>
+  </div>
+{% endblock %}

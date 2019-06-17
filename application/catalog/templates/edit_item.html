@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block content %}
+<div id="edit_item">
+<h1>Edit Item</h1>
+<form action="{{ url_for('item.update') }}" method="POST">
+  <input type="hidden" name="id" value="{{item['id']}}">
+  <div>
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" value="{{item['title']}}">
+  </div>
+  <div>
+      <label for="edit_item_category">Category</label>
+      <select name="category">
+        {% for category in categories %}      
+          <option value="{{ category['id'] }}">{{ category['name'] }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  <div>
+    <label for="description">Description</label>
+    <textarea type="text" name="description" id="description">{{item['description']}}</textarea>
+  </div>
+  <input type="submit" value="Save">
+</form>
+</div>
+{% endblock %}
